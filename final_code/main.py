@@ -9,7 +9,7 @@ import timeit
 start_time = timeit.default_timer()
 
 print('Загружаем жадные словари .....')
-
+# нужно быть внимательными к местунахождения словарей
 folder_path = "C:\\Users\\HP\\Desktop\\hacaton\\grid_dict"
 
 # Получаем список файлов в папке
@@ -230,6 +230,7 @@ def predict_gender(row):
 start_time_block1 = timeit.default_timer()
 # Применение функции к DataFrame
 
+# этот код проходится по тестовому набору данных и выводим предсказания
 file_path_test = "C:\\Users\\HP\\Desktop\\hacaton\\data\\test.json"
 # нам понадобятся функции преобразователи их в прод надо не забыть
 df_test = pd.read_json(file_path_test)
