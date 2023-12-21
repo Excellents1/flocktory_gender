@@ -266,7 +266,7 @@ def dict_to_pickle(dict_name, file_name):
     with open(file_name + '.pickle', 'wb') as file:
         pickle.dump(dict_name, file)
 
-# сохраним эти словари - это мотор для нашей модели классификации
+# сохраним эти словари - это мотор для нашей модели классификации - поэтому нужно запомнить куда мы их сохраняем
 dict_to_pickle(gender_ratio_orders_count, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\gender_ratio_orders_count')
 dict_to_pickle(gender_ratio_visits_count, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\gender_ratio_visits_count')
 dict_to_pickle(gender_ratio_last_visited_categories, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\gender_ratio_last_visited_categories')
