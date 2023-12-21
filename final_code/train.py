@@ -11,7 +11,7 @@ start_time_block1 = timeit.default_timer()
 
 # зададим директорию откуда будет забирать тренировочный набор данных и загрузим их
 print('Загружаем тренировочный набор данных и производим над ним преобразования ......')
-file_path_train = "C:\\Users\\HP\\Desktop\\check\\data\\train.json"
+file_path_train = "C:\\Users\\HP\\Desktop\\hacaton\\data\\train.json"
 
 # загружаем наш тренировочный набор данных в pandas
 df_train = pd.read_json(file_path_train)
@@ -266,15 +266,15 @@ def dict_to_pickle(dict_name, file_name):
     with open(file_name + '.pickle', 'wb') as file:
         pickle.dump(dict_name, file)
 
-# сохраним эти словари - это мотор для нашей модели классификации
-dict_to_pickle(gender_ratio_orders_count, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\gender_ratio_orders_count')
-dict_to_pickle(gender_ratio_visits_count, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\gender_ratio_visits_count')
-dict_to_pickle(gender_ratio_last_visited_categories, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\gender_ratio_last_visited_categories')
-dict_to_pickle(gender_ratio_site_meta_list, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\gender_ratio_site_meta_list')
-dict_to_pickle(gender_ratio_item_ids_count, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\gender_ratio_item_ids_count')
-dict_to_pickle(gender_ratio_category_path_count, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\gender_ratio_category_path_count')
-dict_to_pickle(gender_ratio_brand_ids_count, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\gender_ratio_brand_ids_count')
-dict_to_pickle(gender_ratio_selected_sites, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\gender_ratio_selected_sites')
+# сохраним эти словари - это мотор для нашей модели классификации - поэтому нужно запомнить куда мы их сохраняем
+dict_to_pickle(gender_ratio_orders_count, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\gender_ratio_orders_count')
+dict_to_pickle(gender_ratio_visits_count, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\gender_ratio_visits_count')
+dict_to_pickle(gender_ratio_last_visited_categories, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\gender_ratio_last_visited_categories')
+dict_to_pickle(gender_ratio_site_meta_list, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\gender_ratio_site_meta_list')
+dict_to_pickle(gender_ratio_item_ids_count, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\gender_ratio_item_ids_count')
+dict_to_pickle(gender_ratio_category_path_count, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\gender_ratio_category_path_count')
+dict_to_pickle(gender_ratio_brand_ids_count, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\gender_ratio_brand_ids_count')
+dict_to_pickle(gender_ratio_selected_sites, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\gender_ratio_selected_sites')
 
 end_time_block3 = timeit.default_timer()
 execution_time_block3 = round(end_time_block3 - start_time_block3, 2)
@@ -305,14 +305,14 @@ significant_brand_ids_count = find_significant_elements(brand_ids_count_stats)
 significant_selected_sites = find_significant_elements(selected_sites_stats)
 
 # Запишем наши множества на диск
-dict_to_pickle(significant_orders_count, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\significant_orders_count')
-dict_to_pickle(significant_visits_count, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\significant_visits_count')
-dict_to_pickle(significant_last_visited_categories, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\significant_last_visited_categories')
-dict_to_pickle(significant_site_meta_list, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\significant_site_meta_list')
-dict_to_pickle(significant_item_ids_count, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\significant_item_ids_count')
-dict_to_pickle(significant_category_path_count, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\significant_category_path_count')
-dict_to_pickle(significant_brand_ids_count, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\significant_brand_ids_count')
-dict_to_pickle(significant_selected_sites, 'C:\\Users\\HP\\Desktop\\check\\grid_dict\\significant_selected_sites')
+dict_to_pickle(significant_orders_count, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\significant_orders_count')
+dict_to_pickle(significant_visits_count, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\significant_visits_count')
+dict_to_pickle(significant_last_visited_categories, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\significant_last_visited_categories')
+dict_to_pickle(significant_site_meta_list, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\significant_site_meta_list')
+dict_to_pickle(significant_item_ids_count, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\significant_item_ids_count')
+dict_to_pickle(significant_category_path_count, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\significant_category_path_count')
+dict_to_pickle(significant_brand_ids_count, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\significant_brand_ids_count')
+dict_to_pickle(significant_selected_sites, 'C:\\Users\\HP\\Desktop\\hacaton\\grid_dict\\significant_selected_sites')
 
 end_time_block4 = timeit.default_timer()
 execution_time_block4 = round(end_time_block4 - start_time_block4, 2)
