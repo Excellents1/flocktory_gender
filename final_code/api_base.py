@@ -9,7 +9,7 @@ import timeit
 start_time = timeit.default_timer()
 
 print('Загружаем жадные словари .....')
-
+# нужно быть внимательным к местунахождения словарей
 folder_path = "C:\\Users\\HP\\Desktop\\hacaton\\grid_dict"
 
 # Получаем список файлов в папке
